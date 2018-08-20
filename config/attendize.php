@@ -19,6 +19,7 @@ return [
         'expiryYear' => '2030',
         'cvv' => '123'
     ],
+    'payment_gateway_bitpay' => 5,
     'outgoing_email_noreply' => env('MAIL_FROM_ADDRESS'),
     'outgoing_email'         => env('MAIL_FROM_ADDRESS'),
     'outgoing_email_name'    => env('MAIL_FROM_NAME'),
@@ -68,7 +69,7 @@ return [
     'default_datetime_format'    => 'Y-m-d, H:i',
     'default_query_cache'        => 120, #Minutes
     'default_locale'             => 'en',
-    'default_payment_gateway'    => 1, #Stripe=1 Paypal=2 BitPay=3 MIGS=4
+    'default_payment_gateway'    => 1, #Stripe=1 Paypal=2 Coinbase=3 MIGS=4 BitPay=5
 
     'cdn_url_user_assets'   => '',
     'cdn_url_static_assets' => ''
