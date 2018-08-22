@@ -133,15 +133,12 @@ class ManageAccountController extends MyBaseController
             case config('attendize.payment_gateway_paypal') : //PayPal
                 $config = $request->get('paypal');
                 break;
-            case config('attendize.payment_gateway_coinbase') : //Coinbase
+            case config('attendize.payment_gateway_coinbase') : //BitPay
                 $config = $request->get('coinbase');
                 break;
-            case config('attendize.payment_gateway_bitpay') : //BitPay
-                $config = $request->get('bitpay');
-                break;            
-            case config('attendize.payment_gateway_migs') : //MIGS
-                $config = $request->get('migs');
-                break;
+			case config('attendize.payment_gateway_migs') : //MIGS
+				$config = $request->get('migs');
+				break;
         }
 
         $account_payment_gateway = AccountPaymentGateway::firstOrNew(
